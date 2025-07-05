@@ -1,146 +1,119 @@
-Here's a clean and professional `README.md` in **Markdown** for your **CyberSecurity Tools Suite – Pinnacle Lab Internship** project, removing all clutter and retaining key details:
 
-````markdown
-# 🛡️ CyberSecurity Tools Suite – Pinnacle Lab Internship
+# 🔐 Pinnacle Lab Internship Tasks
 
-![Internship](https://img.shields.io/badge/Internship-PinnacleLab-blueviolet)
-![Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python)
-![License](https://img.shields.io/badge/License-MIT-green)
-![Status](https://img.shields.io/badge/Project-Active-success)
+[![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Made with ❤️ by Abhijith](https://img.shields.io/badge/Made%20with-%E2%9D%A4-red)](https://github.com/abhijithmr226)
 
-A multi-tool Python-based cybersecurity suite developed during my internship at **Pinnacle Lab**, focusing on encryption, image protection, password strength analysis, and ethical keylogger research.  
-**Note:** This project is for educational and ethical cybersecurity research only.
+This repository showcases key Python-based projects developed during the **Pinnacle Lab Cybersecurity Internship**, focusing on:
 
----
-
-## 🔧 Tools Included
-
-### 🔐 1. Text Encryption Tool (AES, DES, RSA)
-
-Encrypt and decrypt text using:
-- **AES** – Advanced Encryption Standard  
-- **DES** – Data Encryption Standard  
-- **RSA** – Asymmetric Encryption  
-
-📁 `TextEncryptor/`  
-📄 `text_crypto.py`
-
-**Usage:**
-```bash
-python text_crypto.py --mode encrypt --algorithm aes --text "Hello World"
-python text_crypto.py --mode decrypt --algorithm des --text "<cipher_text>"
-````
+- ✅ Password Strength Analysis  
+- 🔐 Text Encryption with AES, DES, RSA  
+- 🎯 Keylogger with file-based export
 
 ---
 
-### 🛡️ 2. Keylogger & Defender (Awareness Simulation)
-
-Simulates keystroke logging and provides a basic script detection mechanism.
-⚠️ For ethical awareness only.
-
-📁 `KeyloggerAnalyzer/`
-📄 `keylogger.py`, `keylogger_defender.py`
-
-**Usage:**
+## 📁 Project Structure
 
 ```bash
-python keylogger.py
-python keylogger_defender.py
-```
-
----
-
-### 🖼️ 3. Secure Image Encryption
-
-Encrypts and decrypts `.jpg` images using symmetric encryption.
-
-📁 `SecureImage/`
-📄 `encrypt_image.py`
-
-**Usage (inside Python):**
-
-```python
-from encrypt_image import generate_key, encrypt_image, decrypt_image
-
-generate_key()
-encrypt_image("image.jpg", "output.bin")
-decrypt_image("output.bin", "decrypted.jpg")
-```
-
----
-
-### 🔑 4. Password Strength Analyzer
-
-Analyzes password strength using the **zxcvbn** algorithm.
-
-📁 `PassGuard/`
-📄 `analyzer.py`
-
-**Usage:**
-
-```bash
-python analyzer.py
-```
-
----
-
-## 📦 Installation
-
-Install all dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-Or install manually:
-
-```bash
-pip install cryptography pycryptodome rsa pynput zxcvbn
-```
-
----
-
-## 🗂 Project Structure
-
-```
-CyberSecurityTools/
-├── TextEncryptor/
-│   └── text_crypto.py
-├── KeyloggerAnalyzer/
-│   ├── keylogger.py
-│   └── keylogger_defender.py
-├── SecureImage/
-│   └── encrypt_image.py
-├── PassGuard/
-│   └── analyzer.py
-├── requirements.txt
+Pinnacle_Lab/
+├── Keylogger_Software/
+│   ├── keylogger.py             # Keylogger script
+│   └── keylog.txt               # Keystroke logs
+│
+├── Password_Analyzer/
+│   ├── analyzer.py              # Strength analyzer
+│   ├── banned_password.txt      # Common banned passwords
+│   ├── password_checker.log     # Log file
+│   └── weak_passwords.txt       # Weak password output
+│
+├── Text_Encryption/
+│   └── encryptor.py             # RSA, AES, DES unified script
 └── README.md
 ```
 
 ---
 
-## ⚠️ Ethical Disclaimer
+## 🔑 Password Analyzer
 
-🚨 This project is intended for **educational and ethical** use only.
-**Do not** use these tools on systems you do not own or without explicit permission.
-Use responsibly and legally.
+### 🚀 Features:
+- Password strength rating
+- Checks for weak/banned entries
+- Logs results to `password_checker.log`
+- Outputs weak passwords for auditing
+
+### ▶️ Run:
+```bash
+cd Password_Analyzer
+python analyzer.py yourpassword123
+```
 
 ---
 
-## 📝 License
+## 🔐 Text Encryption (RSA, AES, DES)
 
-This project is licensed under the **MIT License**.
+A single Python script supports all three major encryption techniques.
+
+### 🔒 Features:
+- Encrypt/Decrypt text input using:
+  - AES (Symmetric)
+  - DES (Symmetric)
+  - RSA (Asymmetric)
+- Includes key generation (for RSA)
+
+### ▶️ Run:
+```bash
+cd Text_Encryption
+python encryptor.py
+```
+
+Follow the menu to select encryption type.
+
+---
+
+## 🛡️ Keylogger Software
+
+> ⚠️ **Ethical use only** — for educational/research purposes. Never use without user consent.
+
+### 🧠 Features:
+- Captures all keyboard input
+- Logs to `keylog.txt`
+- Runs silently in the background
+
+### ▶️ Run:
+```bash
+cd Keylogger_Software
+python keylogger.py
+```
+
+Check `keylog.txt` for captured logs.
+
+---
+
+## 📦 Requirements
+
+Install required libraries:
+
+```bash
+pip install pycryptodome pynput
+```
+
+---
+
+## 📜 Disclaimer
+
+> This repository is intended solely for **educational and ethical** cybersecurity learning. Unauthorized use of these tools is strictly prohibited.
 
 ---
 
 ## 👨‍💻 Author
 
-**Abhijith M.R.**
-📧 Email: [abhijhithmr226@gmail.com](mailto:abhijhithmr226@gmail.com)
-🔗 GitHub: [@abhijithmr226](https://github.com/abhijithmr226)
-🔗 LinkedIn: [@abhijithmr226](https://linkedin.com/in/abhijithmr226)
+**Abhijith M.R.**  
+📧 [abhijhithmr226@gmail.com](mailto:abhijhithmr226@gmail.com)  
+🌐 [GitHub](https://github.com/abhijithmr226) | [Instagram](https://instagram.com/abhiz.me) | [LinkedIn](https://linkedin.com/in/abhijith226linkedin)
 
-```
+---
 
-Let me know if you want a ZIP with the folder structure, a rendered preview, or want this turned into a portfolio project page.
-```
+## 📄 License
+
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT) © 2025 Abhijith M.R.
